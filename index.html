@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZENG YIXIA | Portfolio</title>
+  <meta name="description" content="曾奕霞 - 燕山大学产品设计专业 | 产品设计师作品集 | ZENG YIXIA - Product Design Portfolio">
+  <meta property="og:title" content="ZENG YIXIA | Portfolio">
+  <meta property="og:description" content="Product Design Portfolio - Yanshan University">
+  <meta property="og:type" content="website">
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display+Italic:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon (inline SVG data URI) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>Z</text></svg>">
+</head>
+<body>
+
+  <!-- ===== PRELOADER (Obys-style: letter animation + progress counter) ===== -->
+  <div class="preloader" id="preloader" data-component="preloader">
+    <div class="preloader__inner">
+      <div class="preloader__letters" data-letters-container>
+        <span class="preloader__letter" data-letter>Z</span>
+        <span class="preloader__letter" data-letter>E</span>
+        <span class="preloader__letter" data-letter>N</span>
+        <span class="preloader__letter" data-letter>G</span>
+        <span class="preloader__letter preloader__letter--space">&nbsp;</span>
+        <span class="preloader__letter" data-letter>Y</span>
+        <span class="preloader__letter" data-letter>I</span>
+        <span class="preloader__letter" data-letter>X</span>
+        <span class="preloader__letter" data-letter>I</span>
+        <span class="preloader__letter" data-letter>A</span>
+      </div>
+      <div class="preloader__progress">
+        <span class="preloader__progress-num" data-preloader-progress>000</span>
+        <span class="preloader__progress-sign">%</span>
+      </div>
+    </div>
+    <div class="preloader__bottom">
+      <span class="preloader__label">Loading</span>
+      <span class="preloader__label serif-italic">Portfolio</span>
+    </div>
+  </div>
+
+  <!-- ===== CUSTOM CURSOR (Obys-style: lerp + text labels) ===== -->
+  <div class="cursor" id="cursor">
+    <div class="cursor__inner" id="cursorInner"></div>
+  </div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo" data-scroll data-cursor="HOME" data-cursor-theme="light">YIXIA<span>.</span></a>
+      <button class="nav__lang-toggle" id="langToggle" aria-label="Switch language" data-cursor="SWITCH">EN</button>
+      <ul class="nav__links">
+        <li><a href="#about" data-scroll data-i18n="nav.about" data-cursor="VIEW" data-cursor-theme="light">关于</a></li>
+        <li><a href="#projects" data-scroll data-i18n="nav.projects" data-cursor="VIEW" data-cursor-theme="light">项目</a></li>
+        <li><a href="#gallery" data-scroll data-i18n="nav.gallery" data-cursor="VIEW" data-cursor-theme="light">画廊</a></li>
+        <li><a href="#contact" data-scroll data-i18n="nav.contact" data-cursor="VIEW" data-cursor-theme="light">联系</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main data-scroll-container id="main">
+
+    <!-- ========== SECTION 01: HERO ========== -->
+    <section class="hero section" id="hero" data-scroll-section>
+      <div class="hero__bg" data-parallax data-parallax-speed="-0.3">
+        <img src="assets/images/hero-bg.jpg" alt="" loading="eager">
+      </div>
+      <div class="hero__content">
+        <p class="hero__pretitle" data-i18n="hero.pretitle">交互产品设计</p>
+        <h1 class="hero__title" data-split data-split-type="chars">
+          PORTFOLIO
+        </h1>
+        <p class="hero__name">
+          <span data-i18n="hero.name">曾奕霞</span>
+          <em class="serif-italic">ZENG YIXIA</em>
+        </p>
+        <p class="hero__school">
+          <span data-i18n="hero.school">燕山大学 · 产品设计专业</span>
+          <span class="hero__year">2022–2025</span>
+        </p>
+        <div class="hero__scroll-hint" data-cursor="SCROLL" data-cursor-theme="light">
+          <span class="hero__scroll-line"></span>
+          <span data-i18n="hero.scrollHint">向下滚动探索</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 02: ABOUT ========== -->
+    <section class="about section" id="about" data-scroll-section>
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__number serif-italic">01</span>
+          <h2 class="section__title" data-split data-split-type="lines" data-i18n="about.title">关于我</h2>
+          <p class="section__subtitle serif-italic" data-i18n="about.subtitle">About the Designer</p>
+        </div>
+        <div class="about__grid">
+          <div class="about__left" data-reveal data-parallax data-parallax-speed="0.1">
+            <p class="about__bio" data-i18n="about.bio">我是曾奕霞,一名来自燕山大学产品设计专业的学生。专注于交通工具设计与装备设计方向,致力于将美学与功能完美融合。</p>
+            <p class="about__bio" data-i18n="about.bio2">绩点排名专业第一(1/24),多次获得国家级A类设计竞赛奖项,拥有5项专利授权。我相信好的设计源于对生活的深刻洞察与对技术的精准把控。</p>
+            <div class="about__stats">
+              <div class="stat">
+                <span class="stat__num" data-i18n="about.statProjects">6+</span>
+                <span class="stat__label" data-i18n="about.statProjectsLabel">完整项目</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num">5</span>
+                <span class="stat__label" data-i18n="about.statPatentsLabel">项专利授权</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num">10+</span>
+                <span class="stat__label" data-i18n="about.statAwardsLabel">国家级奖项</span>
+              </div>
+            </div>
+          </div>
+          <div class="about__right" data-reveal data-parallax data-parallax-speed="-0.1">
+            <div class="about__tags">
+              <span class="tag" data-i18n="about.tag1">交通工具设计</span>
+              <span class="tag" data-i18n="about.tag2">概念产品设计</span>
+              <span class="tag tag--highlight">Blender</span>
+              <span class="tag tag--highlight">Rhino</span>
+              <span class="tag tag--highlight">KeyShot</span>
+              <span class="tag tag--highlight">Photoshop</span>
+              <span class="tag tag--highlight">Illustrator</span>
+              <span class="tag tag--highlight">Premiere Pro</span>
+              <span class="tag" data-i18n="about.tag3">UI界面设计</span>
+              <span class="tag" data-i18n="about.tag4">信息可视化</span>
+              <span class="tag" data-i18n="about.tag5">手绘表现</span>
+              <span class="tag">CET-4</span>
+            </div>
+            <div class="about__highlights">
+              <div class="highlight">
+                <span class="highlight__icon">&#9733;</span>
+                <p data-i18n="about.highlight1">国家励志奖学金 × 4</p>
+              </div>
+              <div class="highlight">
+                <span class="highlight__icon">&#9733;</span>
+                <p data-i18n="about.highlight2">校级一等奖学金 × 4</p>
+              </div>
+              <div class="highlight">
+                <span class="highlight__icon">&#9733;</span>
+                <p data-i18n="about.highlight3">米兰设计周国赛一等奖</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 03: PROJECTS ========== -->
+    <section class="projects section" id="projects" data-scroll-section>
+
+      <!-- Section Header -->
+      <div class="projects__intro container" data-reveal>
+        <span class="section__number serif-italic">02</span>
+        <h2 class="section__title" data-split data-split-type="lines" data-i18n="projects.title">精选项目</h2>
+        <p class="section__subtitle serif-italic" data-i18n="projects.subtitle">Selected Works</p>
+      </div>
+
+      <!-- Fixed Progress Bar -->
+      <div class="projects__progress" id="projectsProgress">
+        <div class="projects__progress-bar" id="projectsProgressBar"></div>
+        <div class="projects__progress-dots" id="projectsDots"></div>
+      </div>
+
+      <!-- Project 1: 睿翼 MINI -->
+      <article class="proj-item" data-proj-index="0" data-proj-color="#D4A520">
+        <div class="proj-item__header container">
+          <div class="proj-item__meta">
+            <span class="proj-item__num serif-italic">01</span>
+            <span class="proj-item__cat" data-i18n="projects.p1cat">概念交通工具</span>
+          </div>
+          <span class="proj-item__counter">01 / 05</span>
+        </div>
+        <div class="proj-item__content container">
+          <h3 class="proj-item__title" data-split data-split-type="chars" data-i18n="projects.p1name">睿翼 MINI</h3>
+          <p class="proj-item__desc" data-i18n="projects.p1desc">仿生鹰膜式内海通勤飞行器方案设计 · 含UI界面系统</p>
+        </div>
+        <figure class="proj-item__image" data-parallax data-parallax-speed="0.15" data-cursor="VIEW" data-cursor-theme="dark">
+          <img src="assets/images/projects/ruiyi/p2.jpg" alt="睿翼 MINI" loading="lazy">
+        </figure>
+      </article>
+
+      <!-- Project 2: HYPTEC SEED -->
+      <article class="proj-item" data-proj-index="1" data-proj-color="#6B5CE7">
+        <div class="proj-item__header container">
+          <div class="proj-item__meta">
+            <span class="proj-item__num serif-italic">02</span>
+            <span class="proj-item__cat" data-i18n="projects.p2cat">智能移动系统</span>
+          </div>
+          <span class="proj-item__counter">02 / 05</span>
+        </div>
+        <div class="proj-item__content container">
+          <h3 class="proj-item__title" data-split data-split-type="chars">HYPTEC SEED</h3>
+          <p class="proj-item__desc" data-i18n="projects.p2desc">AI时代人本主义创造力系统概念车 · 270度全景座舱</p>
+        </div>
+        <figure class="proj-item__image" data-parallax data-parallax-speed="0.15" data-cursor="VIEW" data-cursor-theme="dark">
+          <img src="assets/images/projects/hyptec/p9.jpg" alt="HYPTEC SEED" loading="lazy">
+        </figure>
+      </article>
+
+      <!-- Project 3: GAC 赛博赛车 -->
+      <article class="proj-item" data-proj-index="2" data-proj-color="#39FF14">
+        <div class="proj-item__header container">
+          <div class="proj-item__meta">
+            <span class="proj-item__num serif-italic">03</span>
+            <span class="proj-item__cat" data-i18n="projects.p3cat">赛车设计</span>
+          </div>
+          <span class="proj-item__counter">03 / 05</span>
+        </div>
+        <div class="proj-item__content container">
+          <h3 class="proj-item__title" data-split data-split-type="chars" data-i18n="projects.p3name">GAC 赛博赛车</h3>
+          <p class="proj-item__desc" data-i18n="projects.p3desc">赛博朋克风格广汽合作概念赛车 · 肌肉流线型语言</p>
+        </div>
+        <figure class="proj-item__image" data-parallax data-parallax-speed="0.15" data-cursor="VIEW" data-cursor-theme="dark">
+          <img src="assets/images/projects/gac/p18.jpg" alt="GAC 赛博赛车" loading="lazy">
+        </figure>
+      </article>
+
+      <!-- Project 4: KAIQING HANYU -->
+      <article class="proj-item" data-proj-index="3" data-proj-color="#8B6914">
+        <div class="proj-item__header container">
+          <div class="proj-item__meta">
+            <span class="proj-item__num serif-italic">04</span>
+            <span class="proj-item__cat" data-i18n="projects.p4cat">越野SUV</span>
+          </div>
+          <span class="proj-item__counter">04 / 05</span>
+        </div>
+        <div class="proj-item__content container">
+          <h3 class="proj-item__title" data-split data-split-type="chars">KAIQING HANYU</h3>
+          <p class="proj-item__desc" data-i18n="projects.p4desc">极致硬核越野SUV设计方案 · 黑/绿野双版本</p>
+        </div>
+        <figure class="proj-item__image" data-parallax data-parallax-speed="0.15" data-cursor="VIEW" data-cursor-theme="dark">
+          <img src="assets/images/projects/kaiqing/p24.jpg" alt="KAIQING HANYU SUV" loading="lazy">
+        </figure>
+      </article>
+
+      <!-- Project 5: SEA WORLD -->
+      <article class="proj-item" data-proj-index="4" data-proj-color="#5E60CE">
+        <div class="proj-item__header container">
+          <div class="proj-item__meta">
+            <span class="proj-item__num serif-italic">05</span>
+            <span class="proj-item__cat" data-i18n="projects.p5cat">信息可视化</span>
+          </div>
+          <span class="proj-item__counter">05 / 05</span>
+        </div>
+        <div class="proj-item__content container">
+          <h3 class="proj-item__title" data-split data-split-type="chars">SEA WORLD</h3>
+          <p class="proj-item__desc" data-i18n="projects.p5desc">船舶知识图谱信息可视化海报 + 品牌周边衍生品设计</p>
+        </div>
+        <figure class="proj-item__image" data-parallax data-parallax-speed="0.15" data-cursor="VIEW" data-cursor-theme="dark">
+          <img src="assets/images/projects/seaworld/p28.jpg" alt="SEA WORLD" loading="lazy">
+        </figure>
+      </article>
+
+    </section>
+
+    <!-- ========== SECTION 04: GALLERY ========== -->
+    <section class="gallery section" id="gallery" data-scroll-section>
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__number serif-italic">03</span>
+          <h2 class="section__title" data-split data-split-type="lines" data-i18n="gallery.title">创作画廊</h2>
+          <p class="section__subtitle serif-italic" data-i18n="gallery.subtitle">Gallery & Sketches</p>
+        </div>
+      </div>
+      <div class="gallery__grid container">
+        <figure class="gallery__item gallery__item--tall" data-reveal data-parallax data-parallax-speed="-0.1" data-cursor="OPEN" data-cursor-theme="light">
+          <img src="assets/images/gallery/p32.jpg" alt="手绘作品集" loading="lazy">
+          <figcaption data-i18n="gallery.fig1">产品手绘合集</figcaption>
+        </figure>
+        <figure class="gallery__item" data-reveal data-parallax data-parallax-speed="0.1" data-cursor="OPEN" data-cursor-theme="light">
+          <img src="assets/images/gallery/p33.jpg" alt="数字绘画作品" loading="lazy">
+          <figcaption data-i18n="gallery.fig2">汽车数字手绘</figcaption>
+        </figure>
+        <figure class="gallery__item gallery__item--wide" data-reveal data-parallax data-parallax-speed="-0.1" data-cursor="OPEN" data-cursor-theme="light">
+          <img src="assets/images/gallery/p34.jpg" alt="人物插画" loading="lazy">
+          <figcaption data-i18n="gallery.fig3">人物插画系列</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 05: CONTACT ========== -->
+    <section class="contact section" id="contact" data-scroll-section>
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__number serif-italic">04</span>
+          <h2 class="section__title" data-split data-split-type="lines" data-i18n="contact.title">联系我</h2>
+          <p class="section__subtitle serif-italic" data-i18n="contact.subtitle">Get in Touch</p>
+        </div>
+        <div class="contact__content" data-reveal>
+          <p class="contact__text" data-i18n="contact.text">如果你对我的作品感兴趣,或者有任何合作意向,欢迎随时联系我。</p>
+          <a href="mailto:zyxYU@163.com" class="contact__email" data-cursor="EMAIL" data-cursor-theme="light">
+            zyxYU@163.com
+          </a>
+          <div class="contact__meta">
+            <span data-i18n="contact.phone">电话: 19833536564</span>
+            <span data-i18n="contact.school">燕山大学 · 产品设计</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer" data-scroll-section>
+      <div class="footer__content">
+        <p class="footer__pretitle" data-i18n="footer.pretitle">我的设计之旅不止于此,期待与你再次相遇</p>
+        <h2 class="footer__title" data-split data-split-type="chars">THANKS FOR WATCHING</h2>
+        <p class="footer__credit">
+          <span data-i18n="footer.credit1">2022–2025</span>&nbsp;&nbsp;
+          <strong>DESIGNER ZENG YIXIA</strong>
+        </p>
+      </div>
+    </footer>
+
+  </main><!-- /data-scroll-container -->
+
+  <!-- ===== MODAL (Project Detail) ===== -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Project detail view">
+    <button class="modal__close" id="modalClose" aria-label="Close" data-cursor="CLOSE" data-cursor-theme="light">&times;</button>
+    <button class="modal__prev" id="modalPrev" aria-label="Previous image" data-cursor="PREV" data-cursor-theme="light">&#10094;</button>
+    <button class="modal__next" id="modalNext" aria-label="Next image" data-cursor="NEXT" data-cursor-theme="light">&#10095;</button>
+    <div class="modal__counter" id="modalCounter"></div>
+    <div class="modal__viewport" id="modalViewport">
+      <img class="modal__image" id="modalImage" alt="">
+    </div>
+    <div class="modal__info" id="modalInfo">
+      <h3 class="modal__title" id="modalTitle"></h3>
+      <p class="modal__desc" id="modalDesc"></p>
+    </div>
+  </div>
+
+  <!-- ===== Scripts ===== -->
+  <!-- GSAP + ScrollTrigger + SplitText (all free since GSAP 3.13) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
+  <!-- Lenis smooth scroll (what Obys actually uses) -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <!-- Failsafe: hide preloader even if scripts fail -->
+  <script>(function(){setTimeout(function(){var l=document.getElementById('preloader');if(l){l.classList.add('is-done');setTimeout(function(){l.style.display='none';},800)}},4000)})();</script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
