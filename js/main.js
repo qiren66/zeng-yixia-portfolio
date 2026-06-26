@@ -43,12 +43,11 @@
       'projects.p4cat': '越野SUV', 'projects.p4desc': '极致硬核越野SUV设计方案 · 黑/绿野双版本',
       'projects.p5cat': '信息可视化', 'projects.p5desc': '船舶知识图谱信息可视化海报 + 品牌周边衍生品设计',
       'gallery.title': '创作画廊', 'gallery.subtitle': 'Gallery & Sketches',
-      'gallery.fig1': '产品设计手绘合集', 'gallery.fig2': '人物数字绘画系列', 'gallery.fig3': '人物插画系列',
-      'gallery.fig4': '作品集封面', 'gallery.fig5': '作品集封底',
+      'gallery.fig1': '人物数字绘画系列', 'gallery.fig2': '产品设计手绘合集',
       'contact.title': '联系我', 'contact.subtitle': 'Get in Touch',
       'contact.text': '如果你对我的作品感兴趣,或者有任何合作意向,欢迎随时联系我。',
       'contact.phone': '电话: 19833536564', 'contact.school': '燕山大学 · 产品设计',
-      'footer.pretitle': '我的设计之旅不止于此,期待与你再次相遇', 'footer.credit1': '2022–2025'
+      'footer.pretitle': '我的设计之旅不止于此,期待与你再次相遇', 'footer.credit1': '2023-2026'
     },
     en: {
       'nav.about': 'About', 'nav.projects': 'Works', 'nav.gallery': 'Gallery', 'nav.contact': 'Contact',
@@ -72,12 +71,11 @@
       'projects.p4cat': 'Off-road SUV', 'projects.p4desc': 'Extreme hardcore off-road SUV design in black / green dual versions',
       'projects.p5cat': 'Info Visualization', 'projects.p5desc': 'Ship knowledge graph infographic poster + brand merchandising design',
       'gallery.title': 'Creative Gallery', 'gallery.subtitle': 'Gallery & Sketches',
-      'gallery.fig1': 'Product Design Sketches', 'gallery.fig2': 'Digital Portrait Series', 'gallery.fig3': 'Character Illustration Series',
-      'gallery.fig4': 'Portfolio Cover', 'gallery.fig5': 'Portfolio Closing',
+      'gallery.fig1': 'Digital Portrait Series', 'gallery.fig2': 'Product Design Sketches',
       'contact.title': 'Get in Touch', 'contact.subtitle': 'Get in Touch',
       'contact.text': 'If you are interested in my work or have any collaboration ideas, feel free to reach out.',
       'contact.phone': 'Tel: 19833536564', 'contact.school': 'Yanshan University · Product Design',
-      'footer.pretitle': 'My design journey goes beyond this. Looking forward to meeting you again.', 'footer.credit1': '2022–2025'
+      'footer.pretitle': 'My design journey goes beyond this. Looking forward to meeting you again.', 'footer.credit1': '2023-2026'
     }
   };
 
@@ -743,11 +741,8 @@
   };
 
   const galleryImages = [
-    { src: 'assets/images/gallery/p32.jpg', alt: '产品设计手绘合集' },
     { src: 'assets/images/gallery/p33.jpg', alt: '人物数字绘画系列' },
-    { src: 'assets/images/gallery/p34.jpg', alt: '人物插画系列' },
-    { src: 'assets/images/gallery/p1.jpg', alt: '作品集封面' },
-    { src: 'assets/images/gallery/p36.jpg', alt: '作品集封底' }
+    { src: 'assets/images/gallery/p34.jpg', alt: '产品设计手绘合集' }
   ];
 
   const Modal = {
