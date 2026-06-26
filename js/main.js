@@ -44,7 +44,7 @@
       'projects.p5cat': '信息可视化', 'projects.p5desc': '船舶知识图谱信息可视化海报 + 品牌周边衍生品设计',
       'gallery.title': '创作画廊', 'gallery.subtitle': 'Gallery & Sketches',
       'gallery.fig1': '产品手绘合集', 'gallery.fig2': '汽车数字手绘', 'gallery.fig3': '人物插画系列',
-      'gallery.fig4': '设计概念展示', 'gallery.fig5': '综合设计作品', 'gallery.fig6': '综合设计作品',
+      'gallery.fig4': '设计概念展示', 'gallery.fig5': '综合设计作品', 'gallery.fig6': '综合设计作品', 'gallery.fig7': '设计过程展示',
       'contact.title': '联系我', 'contact.subtitle': 'Get in Touch',
       'contact.text': '如果你对我的作品感兴趣,或者有任何合作意向,欢迎随时联系我。',
       'contact.phone': '电话: 19833536564', 'contact.school': '燕山大学 · 产品设计',
@@ -73,7 +73,7 @@
       'projects.p5cat': 'Info Visualization', 'projects.p5desc': 'Ship knowledge graph infographic poster + brand merchandising design',
       'gallery.title': 'Creative Gallery', 'gallery.subtitle': 'Gallery & Sketches',
       'gallery.fig1': 'Product Sketch Collection', 'gallery.fig2': 'Automotive Digital Sketching', 'gallery.fig3': 'Character Illustration Series',
-      'gallery.fig4': 'Design Concept Showcase', 'gallery.fig5': 'Comprehensive Design Works', 'gallery.fig6': 'Comprehensive Design Works',
+      'gallery.fig4': 'Design Concept Showcase', 'gallery.fig5': 'Comprehensive Design Works', 'gallery.fig6': 'Comprehensive Design Works', 'gallery.fig7': 'Design Process Showcase',
       'contact.title': 'Get in Touch', 'contact.subtitle': 'Get in Touch',
       'contact.text': 'If you are interested in my work or have any collaboration ideas, feel free to reach out.',
       'contact.phone': 'Tel: 19833536564', 'contact.school': 'Yanshan University · Product Design',
@@ -746,8 +746,10 @@
     { src: 'assets/images/gallery/p32.jpg', alt: '产品手绘合集' },
     { src: 'assets/images/gallery/p33.jpg', alt: '汽车数字手绘' },
     { src: 'assets/images/gallery/p34.jpg', alt: '人物插画系列' },
-    { src: 'assets/images/gallery/p35.jpg', alt: '设计作品' },
-    { src: 'assets/images/gallery/p36.jpg', alt: '设计作品' }
+    { src: 'assets/images/gallery/p1.jpg', alt: '设计概念展示' },
+    { src: 'assets/images/gallery/p35.jpg', alt: '综合设计作品' },
+    { src: 'assets/images/gallery/p36.jpg', alt: '综合设计作品' },
+    { src: 'assets/images/gallery/p34_new.jpg', alt: '设计过程展示' }
   ];
 
   const Modal = {
