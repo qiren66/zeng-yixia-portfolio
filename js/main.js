@@ -701,15 +701,15 @@
         'assets/images/projects/hyptec/p12.jpg',
         'assets/images/projects/hyptec/p13.jpg',
         'assets/images/projects/hyptec/p14.jpg',
-        'assets/images/projects/hyptec/p15.jpg',
-        'assets/images/projects/hyptec/p16.jpg',
-        'assets/images/projects/hyptec/p17.jpg'
+        'assets/images/projects/hyptec/p15.jpg'
       ]
     },
     gac: {
       title: { zh: 'GAC 赛博赛车', en: 'GAC Cyber Racing' },
       desc: { zh: '赛博朋克风格广汽合作概念赛车 · 肌肉流线型语言', en: 'Cyberpunk-style GAC collaboration concept racing car with muscular lines' },
       images: [
+        'assets/images/projects/gac/p16.jpg',
+        'assets/images/projects/gac/p17.jpg',
         'assets/images/projects/gac/p18.jpg',
         'assets/images/projects/gac/p19.jpg',
         'assets/images/projects/gac/p20.jpg',
@@ -741,8 +741,8 @@
   };
 
   const galleryImages = [
-    { src: 'assets/images/gallery/p33.jpg', alt: '人物数字绘画系列' },
-    { src: 'assets/images/gallery/p34.jpg', alt: '产品设计手绘合集' }
+    { src: 'assets/images/gallery/p33.jpg?v=20260626d', alt: '人物数字绘画系列' },
+    { src: 'assets/images/gallery/p34.jpg?v=20260626d', alt: '产品设计手绘合集' }
   ];
 
   const Modal = {
