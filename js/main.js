@@ -44,6 +44,7 @@
       'projects.p5cat': '信息可视化', 'projects.p5desc': '船舶知识图谱信息可视化海报 + 品牌周边衍生品设计',
       'gallery.title': '创作画廊', 'gallery.subtitle': 'Gallery & Sketches',
       'gallery.fig1': '产品手绘合集', 'gallery.fig2': '汽车数字手绘', 'gallery.fig3': '人物插画系列',
+      'gallery.fig4': '设计概念展示', 'gallery.fig5': '综合设计作品', 'gallery.fig6': '综合设计作品',
       'contact.title': '联系我', 'contact.subtitle': 'Get in Touch',
       'contact.text': '如果你对我的作品感兴趣,或者有任何合作意向,欢迎随时联系我。',
       'contact.phone': '电话: 19833536564', 'contact.school': '燕山大学 · 产品设计',
@@ -72,6 +73,7 @@
       'projects.p5cat': 'Info Visualization', 'projects.p5desc': 'Ship knowledge graph infographic poster + brand merchandising design',
       'gallery.title': 'Creative Gallery', 'gallery.subtitle': 'Gallery & Sketches',
       'gallery.fig1': 'Product Sketch Collection', 'gallery.fig2': 'Automotive Digital Sketching', 'gallery.fig3': 'Character Illustration Series',
+      'gallery.fig4': 'Design Concept Showcase', 'gallery.fig5': 'Comprehensive Design Works', 'gallery.fig6': 'Comprehensive Design Works',
       'contact.title': 'Get in Touch', 'contact.subtitle': 'Get in Touch',
       'contact.text': 'If you are interested in my work or have any collaboration ideas, feel free to reach out.',
       'contact.phone': 'Tel: 19833536564', 'contact.school': 'Yanshan University · Product Design',
@@ -675,26 +677,111 @@
   };
 
   // ============================================================
-  // MODULE 7: Modal (gallery image viewer)
+  // MODULE 7: Modal (project detail lightbox)
   // ============================================================
+  const projectImageSets = {
+    ruiyi: {
+      title: { zh: '睿翼 MINI', en: 'RUIYI MINI' },
+      desc: { zh: '仿生鹰膜式内海通勤飞行器方案设计 · 含UI界面系统', en: 'Bionic eagle-membrane inshore commuter aircraft design with UI system' },
+      images: [
+        'assets/images/projects/ruiyi/p2.jpg',
+        'assets/images/projects/ruiyi/p3.jpg',
+        'assets/images/projects/ruiyi/p4.jpg',
+        'assets/images/projects/ruiyi/p5.jpg',
+        'assets/images/projects/ruiyi/p6.jpg',
+        'assets/images/projects/ruiyi/p7.jpg',
+        'assets/images/projects/ruiyi/p8.jpg'
+      ]
+    },
+    hyptec: {
+      title: { zh: 'HYPTEC SEED', en: 'HYPTEC SEED' },
+      desc: { zh: 'AI时代人本主义创造力系统概念车 · 270度全景座舱', en: 'Humanistic creativity concept car for AI era with 270° panoramic cockpit' },
+      images: [
+        'assets/images/projects/hyptec/p9.jpg',
+        'assets/images/projects/hyptec/p10.jpg',
+        'assets/images/projects/hyptec/p11.jpg',
+        'assets/images/projects/hyptec/p12.jpg',
+        'assets/images/projects/hyptec/p13.jpg',
+        'assets/images/projects/hyptec/p14.jpg',
+        'assets/images/projects/hyptec/p15.jpg',
+        'assets/images/projects/hyptec/p16.jpg',
+        'assets/images/projects/hyptec/p17.jpg'
+      ]
+    },
+    gac: {
+      title: { zh: 'GAC 赛博赛车', en: 'GAC Cyber Racing' },
+      desc: { zh: '赛博朋克风格广汽合作概念赛车 · 肌肉流线型语言', en: 'Cyberpunk-style GAC collaboration concept racing car with muscular lines' },
+      images: [
+        'assets/images/projects/gac/p18.jpg',
+        'assets/images/projects/gac/p19.jpg',
+        'assets/images/projects/gac/p20.jpg',
+        'assets/images/projects/gac/p21.jpg',
+        'assets/images/projects/gac/p22.jpg',
+        'assets/images/projects/gac/p23.jpg'
+      ]
+    },
+    kaiqing: {
+      title: { zh: 'KAIQING HANYU', en: 'KAIQING HANYU' },
+      desc: { zh: '极致硬核越野SUV设计方案 · 黑/绿野双版本', en: 'Extreme hardcore off-road SUV design in black / green dual versions' },
+      images: [
+        'assets/images/projects/kaiqing/p24.jpg',
+        'assets/images/projects/kaiqing/p25.jpg',
+        'assets/images/projects/kaiqing/p26.jpg',
+        'assets/images/projects/kaiqing/p27.jpg'
+      ]
+    },
+    seaworld: {
+      title: { zh: 'SEA WORLD', en: 'SEA WORLD' },
+      desc: { zh: '船舶知识图谱信息可视化海报 + 品牌周边衍生品设计', en: 'Ship knowledge graph infographic poster + brand merchandising design' },
+      images: [
+        'assets/images/projects/seaworld/p28.jpg',
+        'assets/images/projects/seaworld/p29.jpg',
+        'assets/images/projects/seaworld/p30.jpg',
+        'assets/images/projects/seaworld/p31.jpg'
+      ]
+    }
+  };
+
+  const galleryImages = [
+    { src: 'assets/images/gallery/p32.jpg', alt: '产品手绘合集' },
+    { src: 'assets/images/gallery/p33.jpg', alt: '汽车数字手绘' },
+    { src: 'assets/images/gallery/p34.jpg', alt: '人物插画系列' },
+    { src: 'assets/images/gallery/p35.jpg', alt: '设计作品' },
+    { src: 'assets/images/gallery/p36.jpg', alt: '设计作品' }
+  ];
+
   const Modal = {
     modal: null,
     img: null,
-    images: [
-      { src: 'assets/images/gallery/p32.jpg', alt: 'Sketches' },
-      { src: 'assets/images/gallery/p33.jpg', alt: 'Digital art' },
-      { src: 'assets/images/gallery/p34.jpg', alt: 'Illustration' }
-    ],
+    images: [],
     idx: 0,
+    mode: null, // 'project' or 'gallery'
+    currentProject: null,
 
     init() {
       this.modal = $('#modal');
       this.img = $('#modalImage');
       if (!this.modal || !this.img) return;
 
-      $$('.gallery__item').forEach((el, i) => {
-        el.addEventListener('click', () => this.open(i));
+      // Project image click handlers
+      $$('.proj-item').forEach((item) => {
+        const projIndex = parseInt(item.getAttribute('data-proj-index'), 10);
+        const projKeys = Object.keys(projectImageSets);
+        const projKey = projKeys[projIndex];
+        if (!projKey) return;
+
+        const imageEl = $('.proj-item__image', item);
+        if (imageEl) {
+          imageEl.style.cursor = 'pointer';
+          imageEl.addEventListener('click', () => this.openProject(projKey, 0));
+        }
       });
+
+      // Gallery image click handlers
+      $$('.gallery__item').forEach((el, i) => {
+        el.addEventListener('click', () => this.openGallery(i));
+      });
+
       $('#modalClose')?.addEventListener('click', () => this.close());
       $('#modalPrev')?.addEventListener('click', () => this.nav(-1));
       $('#modalNext')?.addEventListener('click', () => this.nav(1));
@@ -711,12 +798,51 @@
       });
     },
 
-    open(i) {
-      this.idx = i || 0;
-      this.img.src = this.images[this.idx].src;
-      this.img.alt = this.images[this.idx].alt;
+    openProject(projKey, startIdx) {
+      const proj = projectImageSets[projKey];
+      if (!proj) return;
+      this.mode = 'project';
+      this.currentProject = projKey;
+      this.images = proj.images.map(src => ({ src, alt: proj.title.zh }));
+      this.idx = startIdx || 0;
+      this.updateView();
+      this.showModal();
+    },
+
+    openGallery(startIdx) {
+      this.mode = 'gallery';
+      this.currentProject = null;
+      this.images = galleryImages;
+      this.idx = startIdx || 0;
+      this.updateView();
+      this.showModal();
+    },
+
+    updateView() {
+      const item = this.images[this.idx];
+      this.img.src = item.src;
+      this.img.alt = item.alt;
+
       const counter = $('#modalCounter');
       if (counter) counter.textContent = (this.idx + 1) + ' / ' + this.images.length;
+
+      // Update modal info
+      const titleEl = $('#modalTitle');
+      const descEl = $('#modalDesc');
+      if (this.mode === 'project' && this.currentProject) {
+        const proj = projectImageSets[this.currentProject];
+        const lang = currentLang || 'zh';
+        if (titleEl) titleEl.textContent = proj.title[lang];
+        if (descEl) descEl.textContent = proj.desc[lang];
+        $('#modalInfo').style.display = '';
+      } else {
+        if (titleEl) titleEl.textContent = item.alt;
+        if (descEl) descEl.textContent = '';
+        $('#modalInfo').style.display = '';
+      }
+    },
+
+    showModal() {
       this.modal.classList.add('is-active');
       SmoothScroll.stop();
       if (hasGSAP) {
@@ -741,10 +867,7 @@
 
     nav(dir) {
       this.idx = (this.idx + dir + this.images.length) % this.images.length;
-      this.img.src = this.images[this.idx].src;
-      this.img.alt = this.images[this.idx].alt;
-      const counter = $('#modalCounter');
-      if (counter) counter.textContent = (this.idx + 1) + ' / ' + this.images.length;
+      this.updateView();
     }
   };
 
